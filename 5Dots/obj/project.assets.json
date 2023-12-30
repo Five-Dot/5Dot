@@ -11657,19 +11657,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rania\\.nuget\\packages\\": {}
+    "C:\\Users\\ayman\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rania\\OneDrive\\Desktop\\E-Commerce\\5Dot\\5Dots\\5Dots.csproj",
+      "projectUniqueName": "C:\\Users\\ayman\\OneDrive\\Desktop\\123\\5Dot\\5Dots\\5Dots.csproj",
       "projectName": "5Dots",
-      "projectPath": "C:\\Users\\rania\\OneDrive\\Desktop\\E-Commerce\\5Dot\\5Dots\\5Dots.csproj",
-      "packagesPath": "C:\\Users\\rania\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rania\\OneDrive\\Desktop\\E-Commerce\\5Dot\\5Dots\\obj\\",
+      "projectPath": "C:\\Users\\ayman\\OneDrive\\Desktop\\123\\5Dot\\5Dots\\5Dots.csproj",
+      "packagesPath": "C:\\Users\\ayman\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ayman\\OneDrive\\Desktop\\123\\5Dot\\5Dots\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rania\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ayman\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11751,7 +11751,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

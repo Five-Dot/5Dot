@@ -5,387 +5,384 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = _5Dots
 build_property.RootNamespace = _5Dots
-build_property.ProjectDir = C:\Users\rania\OneDrive\Desktop\E-Commerce\5Dot\5Dots\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\ayman\OneDrive\Desktop\123\5Dot\5Dots\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\rania\OneDrive\Desktop\E-Commerce\5Dot\5Dots
+build_property.MSBuildProjectDirectory = C:\Users\ayman\OneDrive\Desktop\123\5Dot\5Dots
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Admin/Categories.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Admin/Categories.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2F0ZWdvcmllcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Admin/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Admin/Orders.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Admin/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cT3JkZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Admin/ProductReviews.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Admin/ProductReviews.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZHVjdFJldmlld3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Admin/Products.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Admin/Products.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZHVjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Admin/Testimonials.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Admin/Testimonials.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGVzdGltb25pYWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Admin/Users.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Admin/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/CartProducts/Create.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/CartProducts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFByb2R1Y3RzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/CartProducts/Delete.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/CartProducts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFByb2R1Y3RzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/CartProducts/Details.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/CartProducts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFByb2R1Y3RzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/CartProducts/Edit.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/CartProducts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFByb2R1Y3RzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/CartProducts/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/CartProducts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFByb2R1Y3RzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Carts/Create.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Carts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Carts/Delete.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Carts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Carts/Details.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Carts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Carts/Edit.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Carts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Carts/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Carts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Categories/Create.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Categories/Delete.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Categories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Categories/Details.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Categories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Categories/Edit.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Categories/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Home/Contact.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Home/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Home/Privacy.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/OrderProducts/Create.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/OrderProducts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9kdWN0c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/OrderProducts/Delete.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/OrderProducts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9kdWN0c1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/OrderProducts/Details.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/OrderProducts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9kdWN0c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/OrderProducts/Edit.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/OrderProducts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9kdWN0c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/OrderProducts/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/OrderProducts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9kdWN0c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/OrderProducts/OrderItems.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/OrderProducts/OrderItems.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJQcm9kdWN0c1xPcmRlckl0ZW1zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Orders/Create.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Orders/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Orders/Delete.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Orders/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Orders/Details.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Orders/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Orders/Edit.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Orders/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Orders/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Payments/Create.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Payments/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Payments/Delete.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Payments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Payments/Details.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Payments/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Payments/Edit.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Payments/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Payments/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Payments/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/ProductImages/Create.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/ProductImages/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEltYWdlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/ProductImages/Delete.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/ProductImages/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEltYWdlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/ProductImages/Details.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/ProductImages/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEltYWdlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/ProductImages/Edit.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/ProductImages/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEltYWdlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/ProductImages/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/ProductImages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEltYWdlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Products/Create.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Products/Delete.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Products/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Products/Details.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Products/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Products/Edit.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Products/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Products/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Reviews/Create.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Reviews/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Reviews/Delete.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Reviews/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Reviews/Details.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Reviews/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Reviews/Edit.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Reviews/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Reviews/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Reviews/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Shared/Error.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Shop/AddVisa.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Shop/AddVisa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxBZGRWaXNhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Shop/Category.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Shop/Category.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxDYXRlZ29yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Shop/Checkout.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Shop/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Shop/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Shop/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Shop/ProductDetails.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Shop/ProductDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxQcm9kdWN0RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Shop/UserCart.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Shop/UserCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxVc2VyQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Testimonials/Create.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Testimonials/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Testimonials/Delete.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Testimonials/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Testimonials/Details.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Testimonials/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Testimonials/Edit.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Testimonials/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Testimonials/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Testimonials/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Users/Create.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Users/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Users/Delete.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Users/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Users/Details.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Users/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Users/Edit.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Users/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Users/EditProfile.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Users/EditProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Users/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Users/Profile.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Users/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Visas/Create.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Visas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzYXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Visas/Delete.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Visas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzYXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Visas/Details.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Visas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzYXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Visas/Edit.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Visas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzYXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Visas/Index.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Visas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/_ViewImports.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/_ViewStart.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-xfbuo6ff44
 
-[C:/Users/rania/OneDrive/Desktop/E-Commerce/5Dot/5Dots/Views/Shared/_Layout.cshtml]
+[C:/Users/ayman/OneDrive/Desktop/123/5Dot/5Dots/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2x3y0vpi3n
