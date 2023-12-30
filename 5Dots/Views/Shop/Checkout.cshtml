@@ -1,53 +1,12 @@
 ﻿<link rel="stylesheet" href="~/css/Checkout.css" type="text/css">
  @model User
-@*    @if (ViewBag.Visa != null)
-    {<div class="container">
 
-        <div class="card">
-            <img src="https://seeklogo.com/images/V/VISA-logo-62D5B26FE1-seeklogo.com.png" class="logo-card">
-            <label>Card number:</label>
-            <input id="user" type="text" class="input cardnumber" value="@ViewBag.Visa.VisaNumber" readonly>
-            <label>Name:</label>
-            <input class="input name" value="@Model.FirstName @Model.LastName" readonly>
-            <label class="toleft">CCV:</label>
-            <input class="input toleft ccv" value="@ViewBag.Visa.CVC" readonly>
-        </div>
-        <div class="receipt">
-            <div class="col">
-                <div><h5><b>Summary</b></h5></div>
-                <hr>
-                <div class="row">
-                    <div class="col" style="padding-left:0;">All Items</div>
-                    <div class="col text-right"> @ViewBag.Cart.TotalPrice JD</div>
-                </div>
-                <form asp-controller="Shop"
-                      asp-action="Checkout" method="post">
-                    <div class="row">
-                        <div class="col" style="padding-left:0;">SHIPPING </div>
-                        <div class="col text-right"> 3.00 JD</div>
-                    </div>
-
-                    <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                        <div class="col">TOTAL PRICE</div>
-                        @{
-                            var total = ViewBag.Cart.TotalPrice + 3;
-                        }
-                        <div class="col text-right">@total JD</div>
-                    </div>
-                    <p class="comprobe">This information will be sended to your email</p>
-                    <button class="btn">PROCEED</button>
-                </form>
-            </div>
-
-		</div>
-	</div>
-    }
-    else
-    {
-        <a asp-action="AddVisa" asp-controller="Shop" asp-route-id="@Model.Id" class="btn btn-primary ml-3">Add Visa</a>
-    } *@
 <link rel="stylesheet" href="~/css/CartStyle.css" type="text/css">
- 
+ <style>
+     input{
+        color: black
+     }
+ </style>
 <div class="card" style="background: white;">
     <div class="row">
         <div class="col-md-8 cart">
@@ -64,14 +23,20 @@
                     <div class="card">
                         <img src="https://seeklogo.com/images/V/VISA-logo-62D5B26FE1-seeklogo.com.png" class="logo-card">
                         <label>Card number:</label>
-                        <input id="user" type="text" class="input cardnumber" value="@ViewBag.Visa.VisaNumber" readonly>
+                        @{
+                            var visaNumber = ViewBag.Visa.VisaNumber;
+                            var visiblePart = new string('*', visaNumber.Length - 4) + visaNumber.Substring(visaNumber.Length - 4, 4);
+                        }
+
+                        <input id="user" type="text" class="input cardnumber" value="@visiblePart" readonly>
+
                         <div style="display: flex;justify-content: space-around;">
                             <label>Name:</label><label class="toleft">CCV:</label>
                             </div>
                         <div style="display: flex;justify-content: space-between;align-items: center;">
 
                         <input class="input name" value="@Model.FirstName @Model.LastName" readonly>
-                            <input class="input toleft ccv" style="margin-top: 0px;margin-right: 76px;" value="@ViewBag.Visa.CVC" readonly>
+                            <input class="input toleft ccv" style="margin-top: 10px;margin-right: 76px;" value="@ViewBag.Visa.CVC" readonly>
                         </div>
 
                     </div>
@@ -82,31 +47,6 @@
         <a asp-action="AddVisa" asp-controller="Shop" asp-route-id="@Model.Id" class="btn btn-primary ml-3">Add Visa</a>
                 
             }
-         @*    @foreach (var product in (List<CartProduct>)(ViewBag.CartProducts))
-            {
-                <div class="row border-top border-bottom">
-                    <div class="row main align-items-center">
-                        <div class="col-2">
-                            @{
-                                string imageBase64 = Convert.ToBase64String(product.Product.Image);
-                            }
-                            <img src="data:image;base64,@imageBase64" class="img-fluid">
-                        </div>
-                        <div class="col">
-                            <div class="row text-muted">@product.Product.Category.CategoryName</div>
-                            <div class="row">@product.Product.ProductName</div>
-                        </div>
-                        <div class="col">
-                            <a href="/Shop/RemoveOneItemFromProduct?ProductId=@product.ProductId&CartId=@product.CartId&">-</a>
-                            <a href="#" class="border">
-                                @product.ProductQuantity
-                            </a>
-                            <a href="/Shop/AddOneItemToProduct?ProductId=@product.ProductId&CartId=@product.CartId">+</a>
-                        </div>
-                        <div class="col">@product.Product.ProductPrice JD<span class="close"><a href="/Shop/RemoveProductFromCart?ProductId=@product.ProductId&CartId=@product.CartId">&#10005;</a></span></div>
-                    </div>
-                </div>
-            } *@
             <div class="back-to-shop"><a href="/Shop/Index">&leftarrow;<span class="text-muted">Back to shop</span></a></div>
         </div>
         <div class="col-md-4 summary">

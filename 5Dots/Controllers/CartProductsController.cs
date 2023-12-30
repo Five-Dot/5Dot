@@ -105,7 +105,7 @@ namespace _5Dots.Controllers
             product.ProductQuantityStock-=quantity;
             _context.Update(product);
             await _context.SaveChangesAsync();
-            return RedirectToAction("ProductDetails", "Shop", new {id = id});
+            return RedirectToAction("Index", "Shop");
             //}
             //ViewData["ProductId"] = new SelectList(_context.Products, "ProductId", "ProductDescription", cartProduct.ProductId);
             //return View(cartProduct);

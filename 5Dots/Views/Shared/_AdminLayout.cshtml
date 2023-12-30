@@ -1,7 +1,7 @@
 ﻿@using System.Security.Claims
 @using Microsoft.Data.SqlClient
 @{
-    var connectionString = "Server=DESKTOP-8URSSGI\\SQLEXPRESS;Database=FiveDots;Trusted_Connection=True;TrustServerCertificate=True";
+    var connectionString = "Server=.;Database=FiveDots;Trusted_Connection=True;TrustServerCertificate=True";
     var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
     var userRow = new Dictionary<string, object>();
 

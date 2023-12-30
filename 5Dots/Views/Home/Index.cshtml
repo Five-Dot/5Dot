@@ -1,6 +1,6 @@
 ﻿@model User
 @{
-    ViewData["Title"] = "Home Page";
+ViewData["Title"] = "Home Page";
 }
 <!-- Hero Section Begin -->
 <section class="hero">
@@ -15,9 +15,10 @@
                     <ul>
                         @foreach (var item in ViewBag.Categories)
                         {
-                            <li>
-                                <a href="/Shop/Category?id=@item.CategoryId&selectedCategory=item.CategoryName">@item.CategoryName</a>
-                            </li>
+                        <li>
+                            <a
+                                href="/Shop/Category?id=@item.CategoryId&selectedCategory=item.CategoryName">@item.CategoryName</a>
+                        </li>
                         }
                     </ul>
                 </div>
@@ -28,7 +29,7 @@
                         <span>Smart Phone</span>
                         <h2>Phones <br />100% Original</h2>
                         <p>Experience seamless convenience with our hassle-free delivery options</p>
-                        <a href="#" class="primary-btn">BUY NOW</a>
+                        <a href="/Shop/Index" class="primary-btn">BUY NOW</a>
                     </div>
                 </div>
             </div>
@@ -43,13 +44,13 @@
             <div class="categories__slider owl-carousel">
                 @foreach (var item in ViewBag.Categories)
                 {
-                    <div class="col-lg-3">
-                        @{
-                            string imageBase64 = Convert.ToBase64String(item.Image);
-                        }
-                        <img class="categories__item set-bg" src="data:image;base64,@imageBase64">
-                        <h5 class="text-center"><a href="#">@item.CategoryName</a></h5>
-                    </div>
+                <div class="col-lg-3">
+                    @{
+                    string imageBase64 = Convert.ToBase64String(item.Image);
+                    }
+                    <img class="categories__item set-bg" src="data:image;base64,@imageBase64">
+                    <h5 class="text-center"><a href="#">@item.CategoryName</a></h5>
+                </div>
                 }
             </div>
         </div>
@@ -69,9 +70,9 @@
                         <li class="@(ViewBag.SelectedCategory == null ? " active" : "" )" data-filter="*">All</li>
                         @foreach (var category in ViewBag.Categories)
                         {
-                            <li data-filter=".@category.CategoryName.ToLower()">
-                                @category.CategoryName
-                            </li>
+                        <li data-filter=".@category.CategoryName.ToLower()">
+                            @category.CategoryName
+                        </li>
                         }
                     </ul>
                 </div>
@@ -79,45 +80,45 @@
         </div>
         <div class="row featured__filter">
             @foreach (var product in ((List<Product>)ViewBag.Products))
-            {
+                {
                 var categoryId = product.CategoryId;
                 short ProductCounter = 5;
                 if (ProductCounter == 0)
                 {
-                    break;
+                break;
                 }
                 // Check if the product belongs to the selected category
                 if (ViewBag.SelectedCategory == null || categoryId == ViewBag.SelectedCategory)
                 {
-                    ProductCounter--;
-                    <div class="col-lg-3 col-md-4 col-sm-6 mix @product.Category.CategoryName.ToLower()">
-                        <div class="featured__item">
-                            @{
-                                string imageBase64 = Convert.ToBase64String(product.Image);
+                ProductCounter--;
+                <div class="col-lg-3 col-md-4 col-sm-6 mix @product.Category.CategoryName.ToLower()">
+                    <div class="featured__item">
+                        @{
+                        string imageBase64 = Convert.ToBase64String(product.Image);
+                        }
+                        <div class="featured__item__pic set-bg">
+                            <img src="data:image;base64,@imageBase64">
+                        </div>
+                        <div class="featured__item__text">
+                            <h6>
+                                <a asp-controller="Shop" asp-action="ProductDetails"
+                                    asp-route-id="@product.ProductId">@product.ProductName</a>
+                            </h6>
+                            @if (product.ProductSale > 0)
+                            {
+                            <h5>@product.ProductPrice JD</h5>
+                            int sale = (int)product.ProductSale;
+                            <p class="text-danger">On Sale! Save @sale%!</p>
                             }
-                            <div class="featured__item__pic set-bg">
-                                <img src="data:image;base64,@imageBase64">
-                            </div>
-                            <div class="featured__item__text">
-                                <h6>
-                                    <a asp-controller="Shop" asp-action="ProductDetails"
-                                         asp-route-id="@product.ProductId">@product.ProductName</a>
-                                </h6>
-                                @if (product.ProductSale > 0)
-                                {
-                                    <h5>@product.ProductPrice JD</h5>
-                                     int sale = (int)product.ProductSale;
-                                    <p class="text-danger">On Sale! Save @sale%!</p>
-                                }
-                                else
-                                {
-                                    <h5>@product.ProductPrice JD</h5>
-                                }
-                            </div>
+                            else
+                            {
+                            <h5>@product.ProductPrice JD</h5>
+                            }
                         </div>
                     </div>
+                </div>
                 }
-            }
+                }
         </div>
 
     </div>
@@ -131,152 +132,99 @@
     <div class="container">
         <div class="row">
             @{
-                int c = 0;
+            int c = 0;
             }
             @foreach (var category in (List<Category>)(ViewBag.Categories))
-            {
+                {
                 c++;
                 <div class="col-lg-4 col-md-6">
                     <div class="latest-product__text">
                         <h4>@category.CategoryName Sales</h4>
                         <div class="latest-product__slider owl-carousel">
-                            @for (int i = 1; i < 3; i++)
-                            {
-                                <div class="latest-prdouct__slider__item">
-                                    @if (i == 1)
-                                    {
-                                        @foreach (var product in category.Products.Where(p => p.ProductSale >
-                                       0).Take(3).ToList())
-                                        {
-                                            string imageBase64 = Convert.ToBase64String(product.Image);
-                                            <a asp-controller="Shop" asp-action="ProductDetails"
-                                               asp-route-id="@product.ProductId" class="latest-product__item">
-                                                <div class="latest-product__item__pic">
-                                                    <img src="data:image;base64,@imageBase64">
-                                                </div>
-                                                <div class="latest-product__item__text">
-                                                    <h6>@product.ProductName</h6>
-                                                    @{
-                                                        decimal price = @product.ProductPrice - (@product.ProductPrice *
-                                                        @product.ProductSale / 100);
-                                                    }
-                                                    <span>
-                                                        @price JD<br />
-                                                        <del style="color:gray; font-weight:300">@product.ProductPrice JD</del>
-                                                    </span>
-                                                </div>
-                                            </a>
+                            @for (int i = 1; i < 3; i++) { <div class="latest-prdouct__slider__item">
+                                @if (i == 1)
+                                {
+                                @foreach (var product in category.Products.Where(p => p.ProductSale >
+                                0).Take(3).ToList())
+                                {
+                                string imageBase64 = Convert.ToBase64String(product.Image);
+                                <a asp-controller="Shop" asp-action="ProductDetails" asp-route-id="@product.ProductId"
+                                    class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="data:image;base64,@imageBase64">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>@product.ProductName</h6>
+                                        @{
+                                        decimal price = @product.ProductPrice - (@product.ProductPrice *
+                                        @product.ProductSale / 100);
                                         }
-                                    }
-                                    else
-                                    {
-                                        @foreach (var product in category.Products.Where(p => p.ProductSale >
-                                       0).Skip(3).ToList())
-                                        {
-                                            string imageBase64 = Convert.ToBase64String(product.Image);
-                                            <a asp-controller="Shop" asp-action="ProductDetails"
-                                               asp-route-id="@product.ProductId" class="latest-product__item">
-                                                <div class="latest-product__item__pic">
-                                                    <img src="data:image;base64,@imageBase64">
-                                                </div>
-                                                <div class="latest-product__item__text">
-                                                    <h6>@product.ProductName</h6>
-                                                    @{
-                                                        decimal price = @product.ProductPrice - (@product.ProductPrice /
-                                                        @product.ProductSale);
-                                                        price = Math.Round(price, 2);
-                                                    }
-                                                    <span>
-                                                        @price JD<br />
-                                                        <del style="color:gray; font-weight:300">@product.ProductPrice JD</del>
-                                                    </span>
-                                                </div>
-                                            </a>
+                                        <span>
+                                            @price JD<br />
+                                            <del style="color:gray; font-weight:300">@product.ProductPrice JD</del>
+                                        </span>
+                                    </div>
+                                </a>
+                                }
+                                }
+                                else
+                                {
+                                @foreach (var product in category.Products.Where(p => p.ProductSale >
+                                0).Skip(3).ToList())
+                                {
+                                string imageBase64 = Convert.ToBase64String(product.Image);
+                                <a asp-controller="Shop" asp-action="ProductDetails" asp-route-id="@product.ProductId"
+                                    class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="data:image;base64,@imageBase64">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>@product.ProductName</h6>
+                                        @{
+                                            decimal price = @product.ProductPrice - (@product.ProductPrice /
+                                            @product.ProductSale);
+                                            price = Math.Round(price, 2);
                                         }
-                                    }
-                                </div>
-                            }
+                                        <span>
+                                            @price JD<br />
+                                            <del style="color:gray; font-weight:300">@product.ProductPrice JD</del>
+                                        </span>
+                                    </div>
+                                </a>
+                                }
+                                }
                         </div>
+                        }
                     </div>
                 </div>
-                if (c == 3)
-                    break;
-            }
         </div>
+        if (c == 3)
+        break;
+        }
+    </div>
     </div>
 </section>
-<!-- Latest Product Section End -->
-<!-- testimonail-section -->
-<div class="testimonail-section mt-150 mb-150">
+<!-- TESTIMONIALS -->
+<section class="categories">
+    <div class="section-title">
+        <h2 style="margin-top: 25px;">What Our Fans Are Saying</h2>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-10 offset-lg-1 text-center">
-                <div class="testimonial-sliders">
-                    <div class="single-testimonial-slider">
-                        <div class="client-avater">
-                            <img src="~/assets_Test/img/avaters/avatar1.png" alt="">
-                        </div>
-                        <div class="client-meta">
-                            <h3>Saira Hakim <span>Local shop owner</span></h3>
-                            <p class="testimonial-body">
-                                " Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
-                            </p>
-                            <div class="last-icon">
-                                <i class="fas fa-quote-right"></i>
-                            </div>
-                        </div>
+            <div class="categories__slider owl-carousel">
+                @foreach (var testimonial in (List<Testimonial>)(ViewBag.Testimonials))
+                {
+                    <div class="col-lg-3" style="    display: flex;flex-direction: column;align-items: center;">
+                        @{
+                            string imageBase64 = Convert.ToBase64String(testimonial.User.Image);
+                        }
+                        <img src="data:image;base64,@imageBase64" style="width: 30%;border-radius: 50px;margin-bottom: 20px;">
+                        <p class="testimonial-body text-center">
+                            "@testimonial.TestimonialMessage ."
+                        </p>
                     </div>
-                    <div class="single-testimonial-slider">
-                        <div class="client-avater">
-                            <img src="~/assets_Test/img/avaters/avatar2.png" alt="">
-                        </div>
-                        <div class="client-meta">
-                            <h3>David Niph <span>Local shop owner</span></h3>
-                            <p class="testimonial-body">
-                                " Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
-                            </p>
-                            <div class="last-icon">
-                                <i class="fas fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-testimonial-slider">
-                        <div class="client-avater">
-                            <img src="~/assets_Test/img/avaters/avatar3.png" alt="">
-                        </div>
-                        <div class="client-meta">
-                            <h3>Jacob Sikim <span>Local shop owner</span></h3>
-                            <p class="testimonial-body">
-                                " Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
-                            </p>
-                            <div class="last-icon">
-                                <i class="fas fa-quote-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </div>
-</div>
-<!-- jquery -->
-<script src="~/assets_Test/js/jquery-1.11.3.min.js"></script>
-<!-- bootstrap -->
-<script src="~/assets_Test/bootstrap/js/bootstrap.min.js"></script>
-<!-- count down -->
-<script src="~/assets_Test/js/jquery.countdown.js"></script>
-<!-- isotope -->
-<script src="~/assets_Test/js/jquery.isotope-3.0.6.min.js"></script>
-<!-- waypoints -->
-<script src="~/assets_Test/js/waypoints.js"></script>
-<!-- owl carousel -->
-<script src="~/assets_Test/js/owl.carousel.min.js"></script>
-<!-- magnific popup -->
-<script src="~/assets_Test/js/jquery.magnific-popup.min.js"></script>
-<!-- mean menu -->
-<script src="~/assets_Test/js/jquery.meanmenu.min.js"></script>
-<!-- sticker js -->
-<script src="~/assets_Test/js/sticker.js"></script>
-<!-- main js -->
-<script src="~/assets_Test/js/main.js"></script>
-<!-- end testimonail-section -->
+</section>

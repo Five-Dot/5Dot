@@ -1,219 +1,145 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<User> signInManager
-@using System.Security.Claims
-@using Microsoft.Data.SqlClient
-@{
-    var connectionString = "Server=DESKTOP-8URSSGI\\SQLEXPRESS;Database=FiveDots;Trusted_Connection=True;TrustServerCertificate=True";
+    @using System.Security.Claims
+    @using Microsoft.Data.SqlClient
+    @{
+    var connectionString =
+    "Server=.;Database=FiveDots;Trusted_Connection=True;TrustServerCertificate=True";
     var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
     var userRow = new Dictionary<string, object>();
-    Dictionary<string, object> cartRow = new Dictionary<string, object>();
-    if (!string.IsNullOrEmpty(userId))
-    {
-        var query = "SELECT * FROM dbo.AspNetUsers WHERE Id = @UserId";
+        Dictionary<string, object> cartRow = new Dictionary<string, object>();
+                if (!string.IsNullOrEmpty(userId))
+                {
+                var query = "SELECT * FROM dbo.AspNetUsers WHERE Id = @UserId";
 
-        using (SqlConnection connection = new SqlConnection(connectionString))
-        using (SqlCommand cmd = new SqlCommand(query, connection))
-        {
-            connection.Open();
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                connection.Open();
 
-            cmd.Parameters.Add(new SqlParameter("@UserId", userId));
+                cmd.Parameters.Add(new SqlParameter("@UserId", userId));
 
-            using (var reader = cmd.ExecuteReader())
-            {
+                using (var reader = cmd.ExecuteReader())
+                {
                 if (reader.Read())
                 {
-                    for (int i = 0; i < reader.FieldCount; i++)
-                    {
-                        var columnName = reader.GetName(i);
-                        var columnValue = reader.GetValue(i);
-                        userRow.Add(columnName, columnValue);
-                    }
-                }
-            }
+                for (int i = 0; i < reader.FieldCount; i++) { var columnName=reader.GetName(i); var
+                    columnValue=reader.GetValue(i); userRow.Add(columnName, columnValue); } } } } } if
+                    (userRow.ContainsKey("Id")) { var userId_=userRow["Id"].ToString(); var
+                    cartQuery="SELECT * FROM carts WHERE UserId = @UserId" ; using (SqlConnection connection=new
+                    SqlConnection(connectionString)) using (SqlCommand cmd=new SqlCommand(cartQuery, connection)) {
+                    connection.Open(); cmd.Parameters.Add(new SqlParameter("@UserId", userId_)); using (var
+                    reader=cmd.ExecuteReader()) { if (reader.Read()) { // Process the single row from the "carts" table
+                    for (int i=0; i < reader.FieldCount; i++) { var columnName=reader.GetName(i); var
+                    columnValue=reader.GetValue(i); cartRow.Add(columnName, columnValue); } } } } } } <!DOCTYPE html>
+                    <html lang="zxx">
+
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="description" content="Ogani Template">
+                        <meta name="keywords" content="Ogani, unica, creative, html">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                        <title>@ViewData["Title"] - 5Dots</title>
+
+                        <!-- Google Font -->
+                        <link
+                            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
+                            rel="stylesheet">
+
+                        <!-- Css Styles -->
+                        <link rel="stylesheet" href="~/assets/css/bootstrap.min.css" type="text/css">
+                        <link rel="stylesheet" href="~/assets/css/font-awesome.min.css" type="text/css">
+                        <link rel="stylesheet" href="~/assets/css/elegant-icons.css" type="text/css">
+                        <link rel="stylesheet" href="~/assets/css/nice-select.css" type="text/css">
+                        <link rel="stylesheet" href="~/assets/css/jquery-ui.min.css" type="text/css">
+                        <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css" type="text/css">
+                        <link rel="stylesheet" href="~/assets/css/slicknav.min.css" type="text/css">
+                        <link rel="stylesheet" href="~/assets/css/style.css" type="text/css">
+                        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+                        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+                        <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+                        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Add your custom styles here */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
         }
-    }
 
-    if (userRow.ContainsKey("Id"))
-    {
-        var userId_ = userRow["Id"].ToString(); 
-        var cartQuery = "SELECT * FROM carts WHERE UserId = @UserId";
-
-        
-
-        using (SqlConnection connection = new SqlConnection(connectionString))
-        using (SqlCommand cmd = new SqlCommand(cartQuery, connection))
-        {
-            connection.Open();
-
-            cmd.Parameters.Add(new SqlParameter("@UserId", userId_));
-
-            using (var reader = cmd.ExecuteReader())
-            {
-                if (reader.Read())
-                {
-                    // Process the single row from the "carts" table
-                    for (int i = 0; i < reader.FieldCount; i++)
-                    {
-                        var columnName = reader.GetName(i);
-                        var columnValue = reader.GetValue(i);
-                        cartRow.Add(columnName, columnValue);
-                    }
-                }
-            }
+        .popup-form {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff; /* Set your preferred background color */
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow for a subtle shadow effect */
+            z-index: 9999;
         }
-    }
-}
-<!DOCTYPE html>
-<html lang="zxx">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Ogani Template">
-    <meta name="keywords" content="Ogani, unica, creative, html">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@ViewData["Title"] - 5Dots</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="~/assets/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="~/assets/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="~/assets/css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="~/assets/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="~/assets/css/style.css" type="text/css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="~/assets_Test/css/all.min.css">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="~/assets_Test/bootstrap/css/bootstrap.min.css">
-    <!-- owl carousel -->
-    <link rel="stylesheet" href="~/assets_Test/css/owl.carousel.css">
-    <!-- magnific popup -->
-    <link rel="stylesheet" href="~/assets_Test/css/magnific-popup.css">
-    <!-- animate css -->
-    <link rel="stylesheet" href="~/assets_Test/css/animate.css">
-    <!-- mean menu css -->
-    <link rel="stylesheet" href="~/assets_Test/css/meanmenu.min.css">
-    <!-- main style -->
-    <link rel="stylesheet" href="~/assets_Test/css/main.css">
-    <!-- responsive -->
-    <link rel="stylesheet" href="~/assets_Test/css/responsive.css">
-</head>
-
-<body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Humberger Begin -->
-    <div class="humberger__menu__overlay"></div>
-    <div class="humberger__menu__wrapper">
-        <div class="humberger__menu__logo">
-            <a href="/Home/Index"><img src="~/assets/img/logo2.png" alt=""></a>
-        </div>
-        <div class="humberger__menu__cart">
-            <ul>
-                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
-            </ul>
-            <div class="header__cart__price">item: <span>$150.00</span></div>
-        </div>
-        <div class="humberger__menu__widget">
-            @if (signInManager.IsSignedIn(User))
-            {
-                <div class="header__top__right__auth">
-                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                        <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
-                    </a>
-                </div>
-                <div class="header__top__right__auth">
-                    <a class="nav-link text-dark" asp-action="Profile" asp-controller="Users">
-                        <i class="fa fa-solid fa-user"></i> Profile
-                    </a>
-                </div>
+            .popup-form label {
+                font-weight: bold;
             }
-            else
-            {
-                <div class="header__top__right__auth">
-                    <a class="nav-link text-dark" asp-controller="Users" asp-action="Create">
-                        <i class="fa fa-sharp fa-solid fa-registered"></i> Register
-                    </a>
-                </div>
-                <div class="header__top__right__auth">
-                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">
-                        <i class="fa fa-regular fa-user"></i> Login
-                    </a>
-                </div>
-            }
-        </div>
-        <nav class="humberger__menu__nav mobile-menu">
-            <ul>
-                <li class="active"><a href="/Home/Index">Home</a></li>
-                <li><a asp-controller="Shop" asp-action="Index">Shop</a></li>
-                <li><a href="/Home/Contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-        <div class="header__top__right__social">
-            <a href="https://github.com/yousefweb/5Dot"><i class="fa-brands fa-github"></i></a>
 
-        </div>
-        <div class="humberger__menu__contact">
-            <ul>
-                @if (signInManager.IsSignedIn(User))
-                {
-                    <li>
-                        <p><i class="fa fa-envelope"></i> @userRow["Email"]</p>
-                    </li>
-                }
-                <li class="bg-danger text-white p-2 rounded" >Free Shipping for All Orders Over 99 JD</li>
-            </ul>
-        </div>
-    </div>
-    <!-- Humberger End -->
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-         
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header__top__left">
-                            <ul>
-                                @if(signInManager.IsSignedIn(User))
-                                {
-                                    <li>
-                                        <p><i class="fa fa-envelope"></i> @userRow["Email"]</p>
-                                    </li>
-                                }
-                                <li class="bg-danger text-white p-2 rounded">Free Shipping for All Orders Over 99 JD</li>
-                            </ul>
+            .popup-form input[type="text"] {
+                width: 100%;
+                padding: 8px;
+                margin-top: 8px;
+                box-sizing: border-box;
+            }
+
+            .popup-form .btn-primary,
+            .popup-form .btn-secondary {
+                margin-top: 10px;
+            }
+
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+                    </head>
+
+                    <body>
+                        <!-- Page Preloder -->
+                        <div id="preloder">
+                            <div class="loader"></div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header__top__right">
-                            <div class="header__top__right__social">
-                                @if (!string.IsNullOrWhiteSpace(User.Identity.Name))
-                                {
-                                    <span style="font-weight: bold; text-align: left; color:forestgreen">Welcome @userRow["FirstName"] @userRow["LastName"] to 5Dots</span>
-                                }
-                                <a href="https://github.com/yousefweb/5Dot" style="margin-left: 20px;"><i class="fa fa-brands fa-github"></i></a>
-                            </div>
 
-                            @if (signInManager.IsSignedIn(User))
-                            {
+                        <!-- Humberger Begin -->
+                        <div class="humberger__menu__overlay"></div>
+                        <div class="humberger__menu__wrapper">
+                            <div class="humberger__menu__logo">
+                                <a href="/Home/Index"><img src="~/assets/img/logo2.png" alt=""></a>
+                            </div>
+                            <div class="humberger__menu__cart">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                                </ul>
+                                <div class="header__cart__price">item: <span>$150.00</span></div>
+                            </div>
+                            <div class="humberger__menu__widget">
+                                @if (signInManager.IsSignedIn(User))
+                                {
                                 <div class="header__top__right__auth">
-                                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Logout"
+                                        asp-route-returnUrl="@Url.Page("/", new { area="" })" method="post">
                                         <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
                                     </a>
                                 </div>
@@ -222,9 +148,9 @@
                                         <i class="fa fa-solid fa-user"></i> Profile
                                     </a>
                                 </div>
-                            }
-                            else
-                            {
+                                }
+                                else
+                                {
                                 <div class="header__top__right__auth">
                                     <a class="nav-link text-dark" asp-controller="Users" asp-action="Create">
                                         <i class="fa fa-sharp fa-solid fa-registered"></i> Register
@@ -235,94 +161,227 @@
                                         <i class="fa fa-regular fa-user"></i> Login
                                     </a>
                                 </div>
+                                }
+                            </div>
+                            <nav class="humberger__menu__nav mobile-menu">
+                                <ul>
+                                    <li class="active"><a href="/Home/Index">Home</a></li>
+                                    <li><a asp-controller="Shop" asp-action="Index">Shop</a></li>
+                                    <li><a href="/Home/Contact">Contact</a></li>
+                                </ul>
+                            </nav>
+                            <div id="mobile-menu-wrap"></div>
+                            <div class="header__top__right__social">
+                                <a href="https://github.com/yousefweb/5Dot"><i class="fa-brands fa-github"></i></a>
+
+                            </div>
+                            <div class="humberger__menu__contact">
+                                <ul>
+                                    @if (signInManager.IsSignedIn(User))
+                                    {
+                                    <li>
+                                        <p><i class="fa fa-envelope"></i> @userRow["Email"]</p>
+                                    </li>
+                                    }
+                                    <li class=" text-danger p-2 rounded">Explore excellence in every device.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Humberger End -->
+                        <!-- Header Section Begin -->
+                        <header class="header">
+                            <div class="header__top">
+                                <div class="container">
+                                    <div class="row">
+
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="header__top__left">
+                                                <ul>
+                                                    @if(signInManager.IsSignedIn(User))
+                                                    {
+                                                    <li>
+                                                        <p><i class="fa fa-envelope"></i> @userRow["Email"]</p>
+                                                    </li>
+                                                    }
+                                                    <li class="text-danger p-2 rounded">Explore excellence in every
+                                                        device.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="header__top__right">
+                                                <div class="header__top__right__social">
+                                                    @if (!string.IsNullOrWhiteSpace(User.Identity.Name))
+                                                    {
+                                                    <span
+                                                        style="font-weight: bold; text-align: left; color:forestgreen">Welcome
+                                                        @userRow["FirstName"] @userRow["LastName"] to 5Dots</span>
+                                                    }
+                                                    <a href="https://github.com/yousefweb/5Dot"
+                                                        style="margin-left: 20px;"><i
+                                                            class="fa fa-brands fa-github"></i></a>
+                                                </div>
+
+                                                @if (signInManager.IsSignedIn(User))
+                                                {
+                                                <div class="header__top__right__auth">
+                                                    <a class="nav-link text-dark" asp-area="Identity"
+                                                        asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home" , new { area="" })">
+                                                        <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+                                                    </a>
+                                                </div>
+                                                <div class="header__top__right__auth">
+                                                    <a class="nav-link text-dark" asp-action="Profile"
+                                                        asp-controller="Users">
+                                                        <i class="fa fa-solid fa-user"></i> Profile
+                                                    </a>
+                                                </div>
+                                                }
+                                                else
+                                                {
+                                                <div class="header__top__right__auth">
+                                                    <a class="nav-link text-dark" asp-controller="Users"
+                                                        asp-action="Create">
+                                                        <i class="fa fa-sharp fa-solid fa-registered"></i> Register
+                                                    </a>
+                                                </div>
+                                                <div class="header__top__right__auth">
+                                                    <a class="nav-link text-dark" asp-area="Identity"
+                                                        asp-page="/Account/Login">
+                                                        <i class="fa fa-regular fa-user"></i> Login
+                                                    </a>
+                                                </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="header__logo">
+                                            <a href="/Home/Index"><img src="~/assets/img/logo2.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <nav class="header__menu" style="display: flex;justify-content: center;">
+                                            <ul>
+                                                <li class="active"><a href="/Home/Index">Home</a></li>
+                                                <li><a asp-controller="Shop" asp-action="Index">Shop</a></li>
+                                                <li><a href="/Home/Contact">Contact</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        @if (signInManager.IsSignedIn(User) && userRow["Role"].ToString().ToUpper() ==
+                                        "USER")
+                                        {
+                                        <div class="header__cart">
+                                            <ul>
+                                                <li><a href="/Shop/UserCart"><i class="fa fa-shopping-bag"></i>
+                                                        <span>@cartRow["TotalQuantity"]</span></a></li>
+                                            </ul>
+                                            <div class="header__cart__price">total: <span>@cartRow["TotalPrice"]
+                                                    JD</span></div>
+                                        </div>
+                                        }
+                                        else
+                                        {
+                                        <div class="header__cart">
+                                            <ul>
+                                                <li><a><i class="fa fa-shopping-bag"></i> <span>0</span></a></li>
+                                            </ul>
+                                            <div class="header__cart__price">total: <span>0 JD</span></div>
+                                        </div>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="humberger__open">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                            </div>
+                        </header>
+                        <!-- Header Section End -->
+                        <div>
+                            @RenderBody()
+                        </div>
+                        <footer class="footer spad" style="padding-top:0px">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="footer__copyright">
+                                            <div class="footer__copyright__text">
+                                                <p>
+                                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                                    Copyright &copy;<script>
+                                                        document.write(new Date().getFullYear());
+                                                    </script> All rights reserved | This Website is by <a
+                                                        href="https://github.com/Five-Dot/5Dot"
+                                                        target="_blank">5Dots</a>
+                                                </p>
+                                            </div>
+                                            <div class="footer__copyright__payment">
+                                            @if (signInManager.IsSignedIn(User))
+                            {
+                                <a @* href="/Testimonials/Create"  *@class="btn bg-primary" style="color:white;margin-right: 20px;">Leave Feedback</a>
                             }
-                        </div>
+                            <img
+                                                    src="~/assets/img/payment-item.png" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+        </div><div class="overlay"></div>
+        <div class="container mt-5">
+                     <!-- Popup Form -->
+
+            <!-- Popup Form -->
+            <div class="popup-form">
+                <button type="button" class="close close-btn" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <form asp-controller="Testimonials" asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label for="TestimonialMessage" class="control-label">Feedback Message:</label>
+                        <!-- Use a textarea instead of an input field -->
+                        <textarea name="TestimonialMessage" class="form-control" rows="4"></textarea>
+                        <span for="TestimonialMessage" class="text-danger"></span>
                     </div>
-                </div>
-
-
-
-
-
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="header__logo">
-                        <a href="/Home/Index"><img src="~/assets/img/logo2.png" alt=""></a>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                        <button type="button" class="btn btn-secondary">Cancel</button>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <nav class="header__menu" style="display: flex;justify-content: center;">
-                        <ul>
-                            <li class="active"><a href="/Home/Index">Home</a></li>
-                            <li><a asp-controller="Shop" asp-action="Index">Shop</a></li>
-                            <li><a href="/Home/Contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                    @if (signInManager.IsSignedIn(User) && userRow["Role"].ToString().ToUpper() == "USER")
-                    {
-                        <div class="header__cart">
-                            <ul>
-                                    <li><a href="/Shop/UserCart"><i class="fa fa-shopping-bag"></i> <span>@cartRow["TotalQuantity"]</span></a></li> 
-                            </ul>
-                            <div class="header__cart__price">total: <span>@cartRow["TotalPrice"] JD</span></div>
-                        </div>
-                    }
-                    else
-                    {
-                        <div class="header__cart">
-                            <ul>
-                                <li><a href="/Carts/Index"><i class="fa fa-shopping-bag"></i> <span>0</span></a></li>
-                            </ul>
-                            <div class="header__cart__price">total: <span>0 JD</span></div>
-                        </div>
-                    }
-                </div>
+                </form>
             </div>
-            <div class="humberger__open">
-                <i class="fa fa-bars"></i>
-            </div>
-        </div>
-    </header>
-    <!-- Header Section End -->
-    <div>
-        @RenderBody()
-    </div>
-    <footer class="footer spad" style="padding-top:0px">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer__copyright">
-                        <div class="footer__copyright__text">
-                            <p>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is by <a href="https://github.com/Five-Dot/5Dot" target="_blank">5Dots</a>
-                            </p>
-                        </div>
-                        <div class="footer__copyright__payment"><img src="~/assets/img/payment-item.png" alt=""></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Section End -->
-    <!-- Js Plugins -->
-    <script src="~/assets/js/jquery-3.3.1.min.js"></script>
-    <script src="~/assets/js/bootstrap.min.js"></script>
-    <script src="~/assets/js/jquery.nice-select.min.js"></script>
-    <script src="~/assets/js/jquery-ui.min.js"></script>
-    <script src="~/assets/js/jquery.slicknav.js"></script>
-    <script src="~/assets/js/mixitup.min.js"></script>
-    <script src="~/assets/js/owl.carousel.min.js"></script>
-    <script src="~/assets/js/main.js"></script>
+                        </footer>
+                        <!-- Footer Section End -->
+                        <!-- Js Plugins -->
+                        <script src="~/assets/js/jquery-3.3.1.min.js"></script>
+                        <script src="~/assets/js/bootstrap.min.js"></script>
+                        <script src="~/assets/js/jquery.nice-select.min.js"></script>
+                        <script src="~/assets/js/jquery-ui.min.js"></script>
+                        <script src="~/assets/js/jquery.slicknav.js"></script>
+                        <script src="~/assets/js/mixitup.min.js"></script>
+                        <script src="~/assets/js/owl.carousel.min.js"></script>
+                        <script src="~/assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn.bg-primary").click(function () {
+                $(".overlay").show();
+                $(".popup-form").show();
+            });
 
+            $(".overlay, .close-btn, .btn-secondary").click(function () {
+                $(".overlay").hide();
+                $(".popup-form").hide();
+            });
+        });
+    </script>
+                        @await RenderSectionAsync("Scripts", required: false)
+                    </body>
 
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
-
-</html>
-
+                    </html>

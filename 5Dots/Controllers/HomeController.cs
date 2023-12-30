@@ -28,7 +28,7 @@ namespace _5Dots.Controllers
             ViewBag.Categories = _context.Categories.Include(category => category.Products).ToList();
             ViewBag.SelectedCategory = selectedCategory;
             ViewBag.ProductImages = _context.ProductImages.ToList();
-
+            ViewBag.Testimonials = _context.Testimonials.Include(testimonial => testimonial.User).Where(testimonial => testimonial.TestimonialStatus == "Accept").Take(3).ToList();
             return View();
         }
 

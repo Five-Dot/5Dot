@@ -11657,24 +11657,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\rania\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\ProjectMVC\\5Dot\\5Dots\\5Dots.csproj",
+      "projectUniqueName": "C:\\Users\\rania\\OneDrive\\Desktop\\EC Pro\\5Dot\\5Dots\\5Dots.csproj",
       "projectName": "5Dots",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\ProjectMVC\\5Dot\\5Dots\\5Dots.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\ProjectMVC\\5Dot\\5Dots\\obj\\",
+      "projectPath": "C:\\Users\\rania\\OneDrive\\Desktop\\EC Pro\\5Dot\\5Dots\\5Dots.csproj",
+      "packagesPath": "C:\\Users\\rania\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rania\\OneDrive\\Desktop\\EC Pro\\5Dot\\5Dots\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\rania\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

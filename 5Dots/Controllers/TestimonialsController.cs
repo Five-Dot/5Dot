@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using _5Dots.Data;
 using _5Dots.Models;
+using System.Security.Claims;
 
 namespace _5Dots.Controllers
 {
@@ -48,7 +49,6 @@ namespace _5Dots.Controllers
         // GET: Testimonials/Create
         public IActionResult Create()
         {
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
             return View();
         }
 
@@ -57,16 +57,13 @@ namespace _5Dots.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TestimonialId,UserId,TestimonialStatus,TestimonialMessage")] Testimonial testimonial)
+        public async Task<IActionResult> Create(Testimonial testimonial)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(testimonial);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", testimonial.UserId);
-            return View(testimonial);
+            testimonial.UserId= User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            testimonial.TestimonialStatus = "Pending";
+            _context.Add(testimonial);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index","Home");
         }
 
         // GET: Testimonials/Edit/5
