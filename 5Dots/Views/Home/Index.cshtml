@@ -44,13 +44,15 @@ ViewData["Title"] = "Home Page";
             <div class="categories__slider owl-carousel">
                 @foreach (var item in ViewBag.Categories)
                 {
+                    <a href="/Shop/Category?id=@item.CategoryId">
                 <div class="col-lg-3">
                     @{
                     string imageBase64 = Convert.ToBase64String(item.Image);
                     }
                     <img class="categories__item set-bg" src="data:image;base64,@imageBase64">
-                    <h5 class="text-center"><a href="#">@item.CategoryName</a></h5>
+                    <h5 class="text-center">@item.CategoryName</h5>
                 </div>
+                </a>
                 }
             </div>
         </div>
@@ -96,13 +98,14 @@ ViewData["Title"] = "Home Page";
                         @{
                         string imageBase64 = Convert.ToBase64String(product.Image);
                         }
+                            <a asp-controller="Shop" asp-action="ProductDetails"
+                               asp-route-id="@product.ProductId">
                         <div class="featured__item__pic set-bg">
                             <img src="data:image;base64,@imageBase64">
                         </div>
                         <div class="featured__item__text">
                             <h6>
-                                <a asp-controller="Shop" asp-action="ProductDetails"
-                                    asp-route-id="@product.ProductId">@product.ProductName</a>
+                                @product.ProductName
                             </h6>
                             @if (product.ProductSale > 0)
                             {
@@ -113,7 +116,7 @@ ViewData["Title"] = "Home Page";
                             else
                             {
                             <h5>@product.ProductPrice JD</h5>
-                            }
+                            }</a>
                         </div>
                     </div>
                 </div>

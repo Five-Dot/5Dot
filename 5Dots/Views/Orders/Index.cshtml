@@ -5,10 +5,6 @@
 }
 
 <h1>Order List</h1>
-
-<p>
-    <a asp-action="Create" class="btn btn-primary">Create New</a>
-</p>
 <div class="table-responsive mb-4">
     <table class="table table-fixed table-striped table-bordered">
         <thead>
@@ -16,9 +12,7 @@
                 <th>
                     User Name
                 </th>
-                <th>
-                    Order Rate
-                </th>
+               
                 <th>
                     Total Price
                 </th>
@@ -46,9 +40,7 @@
                     </td>
 
 
-                    <td>
-                        @Html.DisplayFor(modelItem => item.OrderRate)
-                    </td>
+                    
                     <td>
                         @Html.DisplayFor(modelItem => item.TotalPrice)
                     </td>
