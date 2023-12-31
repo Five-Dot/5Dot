@@ -209,10 +209,6 @@ namespace _5Dots.Controllers
 
             if (user != null)
             {
-                bool userExists = UserExists(user.Id);
-
-                if (userExists)
-                {
                     var visa = _context.Visa
                         .Where(v => v.UserId == user.Id)
                         .FirstOrDefault();
@@ -235,7 +231,7 @@ namespace _5Dots.Controllers
                     }
 
                     return View();
-                }
+                
             }
 
             return RedirectToAction("Index", "Home");
