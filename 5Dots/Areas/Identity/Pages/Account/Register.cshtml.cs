@@ -24,7 +24,7 @@ using Microsoft.Extensions.Logging;
 
 namespace _5Dots.Areas.Identity.Pages.Account
 {
-    //[Authorize(Roles = "ADMIN")]
+   [Authorize(Roles = "ADMIN")]
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<User> _signInManager;
