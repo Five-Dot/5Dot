@@ -93,7 +93,7 @@
           <div class="product__details__quantity">
             <div class="quantity">
               <div class="pro-qty">
-                <input type="text" name="quantity" min="0" max="@Model.ProductQuantityStock" value="0">
+                <input type="text" name="quantity" min="0" max="@Model.ProductQuantityStock" value="@(Model.ProductQuantityStock != null ? Model.ProductQuantityStock : 0)">
               </div>
             </div>
           </div>
