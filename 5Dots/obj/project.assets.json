@@ -11657,19 +11657,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ayman\\.nuget\\packages\\": {}
+    "C:\\Users\\Someone\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ayman\\OneDrive\\Desktop\\123\\5Dot\\5Dots\\5Dots.csproj",
+      "projectUniqueName": "C:\\Users\\Someone\\Desktop\\5Dots\\5Dot\\5Dots\\5Dots.csproj",
       "projectName": "5Dots",
-      "projectPath": "C:\\Users\\ayman\\OneDrive\\Desktop\\123\\5Dot\\5Dots\\5Dots.csproj",
-      "packagesPath": "C:\\Users\\ayman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ayman\\OneDrive\\Desktop\\123\\5Dot\\5Dots\\obj\\",
+      "projectPath": "C:\\Users\\Someone\\Desktop\\5Dots\\5Dot\\5Dots\\5Dots.csproj",
+      "packagesPath": "C:\\Users\\Someone\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Someone\\Desktop\\5Dots\\5Dot\\5Dots\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ayman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Someone\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11751,7 +11751,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
