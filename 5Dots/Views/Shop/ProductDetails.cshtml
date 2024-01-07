@@ -1,251 +1,253 @@
 ﻿@model _5Dots.Models.Product
 @{
-  ViewData["Title"] = "ProductDetails";
+	ViewData["Title"] = "ProductDetails";
 }
 <style>
-    .rate {
-        float: left;
-        height: 46px;
-        padding: 0 -5px;
-    }
+	.rate {
+		float: left;
+		height: 46px;
+		padding: 0 -5px;
+	}
 
-        .rate:not(:checked) > input {
-            position: absolute;
-            top: -9999px;
-        }
+		.rate:not(:checked) > input {
+			position: absolute;
+			top: -9999px;
+		}
 
-        .rate:not(:checked) > label {
-            float: right;
-            width: 1em;
-            overflow: hidden;
-            white-space: nowrap;
-            cursor: pointer;
-            font-size: 30px;
-            color: #ccc;
-        }
+		.rate:not(:checked) > label {
+			float: right;
+			width: 1em;
+			overflow: hidden;
+			white-space: nowrap;
+			cursor: pointer;
+			font-size: 30px;
+			color: #ccc;
+		}
 
-            .rate:not(:checked) > label:before {
-                content: '★ ';
-            }
+			.rate:not(:checked) > label:before {
+				content: '★ ';
+			}
 
-        .rate > input:checked ~ label {
-            color: #ffc700;
-        }
+		.rate > input:checked ~ label {
+			color: #ffc700;
+		}
 
-        .rate:not(:checked) > label:hover,
-        .rate:not(:checked) > label:hover ~ label {
-            color: #deb217;
-        }
+		.rate:not(:checked) > label:hover,
+		.rate:not(:checked) > label:hover ~ label {
+			color: #deb217;
+		}
 
-        .rate > input:checked + label:hover,
-        .rate > input:checked + label:hover ~ label,
-        .rate > input:checked ~ label:hover,
-        .rate > input:checked ~ label:hover ~ label,
-        .rate > label:hover ~ input:checked ~ label {
-            color: #c59b08;
-        }
+		.rate > input:checked + label:hover,
+		.rate > input:checked + label:hover ~ label,
+		.rate > input:checked ~ label:hover,
+		.rate > input:checked ~ label:hover ~ label,
+		.rate > label:hover ~ input:checked ~ label {
+			color: #c59b08;
+		}
 </style>
 <section class="product-details spad">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-6">
-        <div class="product__details__pic">
-          <div class="product__details__pic__item">
-            @{
-              string imageBase64 = Convert.ToBase64String(Model.Image);
-            }
-            <img class="product__details__pic__item--large" src="data:image;base64,@imageBase64" alt="">
-          </div>
-          <div class="product__details__pic__slider owl-carousel">
-            @foreach (var item in ViewBag.ProductImages)
-            {
-              string imageBase = Convert.ToBase64String(item.Image);
-              <img data-imgbigurl="data:image;base64,@imageBase" src="data:image;base64,@imageBase" alt="">
-            }
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6">
-        <div class="product__details__text">
-          <h3>@Model.ProductName</h3>
-          <div class="product__details__rating">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6">
+				<div class="product__details__pic">
+					<div class="product__details__pic__item">
+						@{
+							string imageBase64 = Convert.ToBase64String(Model.Image);
+						}
+						<img class="product__details__pic__item--large" src="data:image;base64,@imageBase64" alt="">
+					</div>
+					<div class="product__details__pic__slider owl-carousel">
+						@foreach (var item in ViewBag.ProductImages)
+						{
+							string imageBase = Convert.ToBase64String(item.Image);
+							<img data-imgbigurl="data:image;base64,@imageBase" src="data:image;base64,@imageBase" alt="">
+						}
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6">
+				<div class="product__details__text">
+					<h3>@Model.ProductName</h3>
+					<div class="product__details__rating">
 
-            @if (@ViewBag.Reviews.Count != 0)
-            {
-                int avgRate = 0;
-                foreach(var review in ViewBag.Reviews)
-                {
-                    avgRate += review.ReviewRate;
-                }
-                avgRate = avgRate / ViewBag.Reviews.Count;
-                for (int i = 0; i < avgRate; i++)
-                {
-                    <i class="fa fa-star" style="color: #ffc700;"></i>
-                }
-            }
-            
-            <span>@ViewBag.Reviews.Count Reviews</span>
-          </div>
-          <div class="product__details__price">@Model.ProductPrice JD</div>
-          <p>@Model.ProductDescription</p>
-                    <form asp-controller="CartProducts"
-                          asp-action="Create_" asp-route-id="@Model.ProductId">
-          <div class="product__details__quantity">
-            <div class="quantity">
-              <div class="pro-qty">
-                <input type="text" name="quantity" min="0" max="@Model.ProductQuantityStock" value="@(Model.ProductQuantityStock != null ? Model.ProductQuantityStock : 0)">
-              </div>
-            </div>
-          </div>
-                        <button class="primary-btn">ADD TO CART</button>
-                    </form>
-          <ul>
-                        <li><b>Availability</b> <span>@(Model.ProductQuantityStock > 0 ? "In Stock" : "Out of Stock")</span></li>
+						@if (@ViewBag.Reviews.Count != 0)
+						{
+							int avgRate = 0;
+							foreach (var review in ViewBag.Reviews)
+							{
+								avgRate += review.ReviewRate;
+							}
+							avgRate = avgRate / ViewBag.Reviews.Count;
+							for (int i = 0; i < avgRate; i++)
+							{
+								<i class="fa fa-star" style="color: #ffc700;"></i>
+							}
+						}
 
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-12">
-        <div class="product__details__tab">
-          <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
-                aria-selected="true">Description</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab" aria-selected="false">Reviews
-                <span>@ViewBag.Reviews.Count</span></a>
-            </li>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane active" id="tabs-1" role="tabpanel">
-              <div class="product__details__tab__desc">
-                <h6>Products Infomation</h6>
-                <p>@Model.ProductDescription</p>
-              </div>
-            </div>
-            <div class="tab-pane" id="tabs-3" role="tabpanel">
-            <div class="product__details__tab__desc">
-              <div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
-                <div class="row">
-                  <div class="col-lg-6">
+						<span>@ViewBag.Reviews.Count Reviews</span>
+					</div>
+					<div class="product__details__price">@Model.ProductPrice JD</div>
+					<p>@Model.ProductDescription</p>
+					<form asp-controller="CartProducts"
+						  asp-action="Create_" asp-route-id="@Model.ProductId">
+						<div class="product__details__quantity">
+							<div class="quantity">
+								<div class="pro-qty">
+									<input type="text" name="quantity" min="0" max="@Model.ProductQuantityStock" value="0">
+								</div>
+							</div>
+						</div>
+						<button class="primary-btn">ADD TO CART</button>
+					</form>
+					<ul>
+						<li><b>Availability</b> <span>@(Model.ProductQuantityStock > 0 ? "In Stock" : "Out of Stock")</span></li>
 
-                    <div class="review_list">
-                        @if (ViewBag.Reviews.Count > 0)
-                        {
-                            IEnumerable<Review> reviews = ViewBag.Reviews as IEnumerable<Review>;
-                            var lastThreeReviews = reviews.Skip(Math.Max(0, reviews.Count() - 3));
-                            foreach (var item in lastThreeReviews)
-                            {
-                                <div class="review_item">
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="img/product/single-product/review-3.png" alt="" />
-                                        </div>
-                                        <div class="media-body ">
-                                            <h4>@item.User.FirstName</h4>
-                                            <div class="product__details__rating">
-                                                @for (int i = 0; i < item.ReviewRate; i++)
-                                                {
-                                                    <i class="fa fa-star" style="color: #ffc700;"></i>
-                                                }
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p>
-                                        @item.ReviewMessage
-                                    </p>
-                                    <p>
-                                        @item.ReviewDate.ToString("dd MMMM yyyy")
-                                    </p>
-                                                        </div>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="product__details__tab">
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
+							   aria-selected="true">Description</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab" aria-selected="false">
+								Reviews
+								<span>@ViewBag.Reviews.Count</span>
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="tabs-1" role="tabpanel">
+							<div class="product__details__tab__desc">
+								<h6>Products Infomation</h6>
+								<p>@Model.ProductDescription</p>
+							</div>
+						</div>
+						<div class="tab-pane" id="tabs-3" role="tabpanel">
+							<div class="product__details__tab__desc">
+								<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+									<div class="row">
+										<div class="col-lg-6">
 
-                                                    }
-                                                }
-                                                else
-                                                {
-                                                    <h4>No Reviews</h4>
-                                                }
-                                            </div>
-                  </div>
+											<div class="review_list">
+												@if (ViewBag.Reviews.Count > 0)
+												{
+													IEnumerable<Review> reviews = ViewBag.Reviews as IEnumerable<Review>;
+													var lastThreeReviews = reviews.Skip(Math.Max(0, reviews.Count() - 3));
+													foreach (var item in lastThreeReviews)
+													{
+														<div class="review_item">
+															<div class="media">
+																<div class="d-flex">
+																	<img src="img/product/single-product/review-3.png" alt="" />
+																</div>
+																<div class="media-body ">
+																	<h4>@item.User.FirstName</h4>
+																	<div class="product__details__rating">
+																		@for (int i = 0; i < item.ReviewRate; i++)
+																		{
+																			<i class="fa fa-star" style="color: #ffc700;"></i>
+																		}
+																	</div>
+																</div>
+															</div>
+															<p>
+																@item.ReviewMessage
+															</p>
+															<p>
+																@item.ReviewDate.ToString("dd MMMM yyyy")
+															</p>
+														</div>
 
-                  <div class="col-lg-6">
-                    <div class="review_box" >
-                      <h4>Add a Review</h4>
-                        <form class="row contact_form" asp-controller="Reviews"
-                                asp-action="Create_" asp-route-id="@Model.ProductId" method="post">
-                       <div style="    display: flex; align-items: center;">
-                         <p style="margin: 0 0 1px 18px;">Your Rating: &nbsp;&nbsp;&nbsp;</p>
-                        <div class="rate">
-                            <input type="radio" id="star5" name="ReviewRate" value="5" />
-                            <label for="star5" title="text">5 stars</label>
-                                                            <input type="radio" id="star4" name="ReviewRate" value="4" />
-                            <label for="star4" title="text">4 stars</label>
-                                                            <input type="radio" id="star3" name="ReviewRate" value="3" />
-                            <label for="star3" title="text">3 stars</label>
-                                                            <input type="radio" id="star2" name="ReviewRate" value="2" />
-                            <label for="star2" title="text">2 stars</label>
-                                                            <input type="radio" id="star1" name="ReviewRate" value="1" />
-                            <label for="star1" title="text">1 star</label>
-                        </div>
-                                                    </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                                                            <textarea class="form-control" name="ReviewMessage" id="message" rows="6"
-                              placeholder="Review"></textarea>
-                          </div>
-                        </div>
-                        <div class="col-md-12 text-right">
-                          <button type="submit" value="submit" class="site-btn">
-                            Submit Now
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+													}
+												}
+												else
+												{
+													<h4>No Reviews</h4>
+												}
+											</div>
+										</div>
+
+										<div class="col-lg-6">
+											<div class="review_box">
+												<h4>Add a Review</h4>
+												<form class="row contact_form" asp-controller="Reviews"
+													  asp-action="Create_" asp-route-id="@Model.ProductId" method="post">
+													<div style="    display: flex; align-items: center;">
+														<p style="margin: 0 0 1px 18px;">Your Rating: &nbsp;&nbsp;&nbsp;</p>
+														<div class="rate">
+															<input type="radio" id="star5" name="ReviewRate" value="5" />
+															<label for="star5" title="text">5 stars</label>
+															<input type="radio" id="star4" name="ReviewRate" value="4" />
+															<label for="star4" title="text">4 stars</label>
+															<input type="radio" id="star3" name="ReviewRate" value="3" />
+															<label for="star3" title="text">3 stars</label>
+															<input type="radio" id="star2" name="ReviewRate" value="2" />
+															<label for="star2" title="text">2 stars</label>
+															<input type="radio" id="star1" name="ReviewRate" value="1" />
+															<label for="star1" title="text">1 star</label>
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+															<textarea class="form-control" name="ReviewMessage" id="message" rows="6"
+																	  placeholder="Review"></textarea>
+														</div>
+													</div>
+													<div class="col-md-12 text-right">
+														<button type="submit" value="submit" class="site-btn">
+															Submit Now
+														</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 <section class="related-product">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-title related__product__title">
-          <h2>Related Product</h2>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      @foreach (var product in ViewBag.products)
-      {
-        @if (product.CategoryId == Model.CategoryId && product.ProductId != Model.ProductId)
-        {
-          <div class="col-lg-4 col-md-6 col-sm-6 @product.Category.CategoryName.ToLower()">
-            <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
-                @{
-                  string imageBase65 = Convert.ToBase64String(product.Image);
-                }
-                <img src="data:image;base64,@imageBase65">
-              </div>
-              <div class="product__item__text">
-                <h6><a asp-route-id="@product.ProductId">@product.ProductName</a></h6>
-                <h5>@product.ProductPrice JD</h5>
-              </div>
-            </div>
-          </div>
-        }
-      }
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title related__product__title">
+					<h2>Related Product</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			@foreach (var product in ViewBag.products)
+			{
+				@if (product.CategoryId == Model.CategoryId && product.ProductId != Model.ProductId)
+				{
+					<div class="col-lg-4 col-md-6 col-sm-6 @product.Category.CategoryName.ToLower()">
+						<div class="product__item">
+							<div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
+								@{
+									string imageBase65 = Convert.ToBase64String(product.Image);
+								}
+								<img src="data:image;base64,@imageBase65">
+							</div>
+							<div class="product__item__text">
+								<h6><a asp-route-id="@product.ProductId">@product.ProductName</a></h6>
+								<h5>@product.ProductPrice JD</h5>
+							</div>
+						</div>
+					</div>
+				}
+			}
 
-    </div>
-  </div>
+		</div>
+	</div>
 </section>
 

@@ -56,7 +56,7 @@ namespace _5Dots.Controllers
 
             return View(category);
         }
-        public async Task<IActionResult> ProductDetails(int? id, int quentity)
+        public async Task<IActionResult> ProductDetails(int? id)
         {
 
             ViewBag.products = _context.Products.ToList();
@@ -77,7 +77,7 @@ namespace _5Dots.Controllers
             {
                 return NotFound();
             }
-            product.ProductQuantityStock = quentity;
+            
 			ViewBag.UserId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value; ;
             return View(product);
         }
